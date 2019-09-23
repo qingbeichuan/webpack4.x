@@ -1,0 +1,13 @@
+body{
+    margin:0;
+    padding:0;
+    color:red;
+}
+
+.postcss{
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.3);
+    border:1px solid red;
+    display: flex;
+    transform: translateX(30px);
+}

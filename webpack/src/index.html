@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 是插件 `html-webpack-plugin` 的功能，让我们可以配置该页面的标题 -->
+    <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+    <div id="app" class="app"></div>
+    <div id="postcss" class="postcss"></div>
+    <div>
+    	<!-- 当在`webpack`中配置了`html-loader`后，就相当于全局设置以`html`模板语法进行解析，`HtmlWebpackPlugin`解析 `html` 模板是以`string`类型进行解析，而解析`ejs`模板是以函数类型进行解析，在全局设置了`html-loader`后，`HtmlWebpackPlugin`就不会认识`ejs`语法了，只会将它当成`string` 直接输出 -->
+    	<!-- <img src="./images/code.jpg" alt=""> -->
+    	<img src="<%= require('./images/code.jpg') %>" alt="">
+    </div>
+    <div id="react"></div>
+</body>
+</html>
